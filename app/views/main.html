@@ -106,7 +106,7 @@
                         <p>Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.</p>
                         <p ng-if="candidate.votepress === true">Thank you for voting!</p>
 
-                        <div layout="column" layout-xs="row">
+                        <div layout="column" layout-xs="row" style="margin-top: -20px;">
                             <div layout="row">
                                 <div layout="row" style="margin-top: 32px;">
                                     <button class="button-thumbup" ng-click="main.getThumbUpOrDown(true,candidate.id)">
@@ -119,7 +119,7 @@
                                 <button ng-if="candidate.votepress === false" class="button-vote-now" ng-click="main.findCandidatebyId(candidate.id, $index)">Vote now</button>
 
                             </div>
-                            <button ng-if="candidate.votepress === true" ng-click="main.voteAgain(candidate.id)" class="button-vote-now">Vote again</button>
+                            <button ng-if="candidate.votepress === true" ng-click="main.voteAgain(candidate.id)" class="button-vote-again">Vote again</button>
                         </div>
 
 

@@ -405,6 +405,19 @@ p{
     font-weight: 600;
   }
 
+  .button-vote-again{
+    color: white;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border-color: white;
+    border-style: solid;
+    font-family: 'Lato', sans-serif;
+    width: 104px;
+    height: 39px;
+    font-weight: 600;
+    margin-top: 6px;
+  }
+
   .color-candidates{
     //background: linear-gradient(to right, #2ac3b0 50%, #ffb732 50%);
     width: 100%;

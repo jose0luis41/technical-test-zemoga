@@ -325,6 +325,18 @@ p.description {
   margin-top: 25px;
   font-weight: 600; }
 
+.button-vote-again {
+  color: white;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border-color: white;
+  border-style: solid;
+  font-family: 'Lato', sans-serif;
+  width: 104px;
+  height: 39px;
+  font-weight: 600;
+  margin-top: 6px; }
+
 .color-candidates {
   width: 100%;
   max-width: 990px;
