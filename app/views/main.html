@@ -1,0 +1,153 @@
+<div flex layout="column" class="header-background">
+
+
+    <div flex layout="row" layout-xs="column" class="menu">
+
+        <p hide-xs class="p-title">Rule of Thumb.</p>
+
+        <div class="sub-menu" flex layout="row">
+            <div class="sub-menu-inside" flex layout="row" layout-sm="column" layout-xs="row">
+                <a target="_blank" ng-click="main.titleAbout(1)" href="views/about.html" class="a-submenu">
+                    <p class="p-title-submenu">Past Trials</p>
+                </a>
+                <a target="_blank"  href="views/about.html" ng-click="main.titleAbout(2)" class="a-submenu">
+                    <p class="p-title-submenu">How its works</p>
+                </a>
+                <a  target="_blank"  href="views/about.html" ng-click="main.titleAbout(3)" class="a-submenu">
+                    <p class="p-title-submenu">Log In/Sign Up</p>
+                </a>
+            </div>
+            <i class="material-icons material-serach">search</i>
+        </div>
+
+        <p show-xs hide-gt-xs class="p-title">Rule of Thumb.</p>
+
+
+    </div>
+
+    <div layout="row" class="div-outside-francis">
+        <div class="div-francis">
+        </div>
+
+        <div flex layout="column" class="content-francis">
+            <p>What's your opinion on</p>
+
+            <p class="title-pope">Pope Francis?</p>
+
+            <p class="text-pope">He's talking tough on clergy sexual abuse, but is he just another parpal pervert protector? (thumbs down) or
+                a true pedophile punishing pontiff? (thumbs up).
+            </p>
+
+
+            <p class="wikipedia">
+                <i class="fa fa-wikipedia-w" aria-hidden="true"></i>
+                <a href="">More information</a>
+            </p>
+
+            <p class="p-veredict">What's your veredict?</p>
+        </div>
+
+        <div class="color-pope">
+        </div>
+
+        <div class="color-pope-inside" layout="row">
+            <i style="color: white" class="far fa-thumbs-up fa-3x i-thumb-up"></i>
+            <i style="color: white" class="far fa-thumbs-down fa-3x"></i>
+        </div>
+
+
+    </div>
+
+
+
+</div>
+
+<div style="height: auto">
+
+    <div class="speakout">
+        <div layout="row" layout-xs="column" class="container-inside">
+            <div flex="25" class="margin-div" layout="column">
+                <p class="p-speakout" style="color: black">Speak out. Be heard.</p>
+                <p class="p-becounted">Be counted</p>
+            </div>
+
+            <div flex="80" class="paragraph">
+                <p class="p-paragraph">
+                    Rule of Thumb is a crowd sourced court of public opinion where anyone and averyone can speak out and speak freely. It's easy:
+                    You share your opinion, we analyze and put the data in a public report.
+                </p>
+            </div>
+
+            <i class="material-icons close-button">close</i>
+        </div>
+
+    </div>
+
+
+    <div class="candidates-container" layout="row" flex layout-margin layout-wrap>
+
+        <div class="card-candidate md-whiteframe-z1" flex-gt-md="45" flex="100" flex-gt-xs="100" flex-xs="100" layout-align="space-between center"
+            ng-repeat="candidate in main.candidates" ng-style="{'background-image':'url(../images/{{candidate.imagepath}})'}">
+
+            <div layout="column" class="div-data">
+                <div layout="row">
+                    <i ng-if="candidate.percentagethumbdown > candidate.percentagethumbup" class="far fa-thumbs-down fa-2x average"></i>
+                    <i ng-if="candidate.percentagethumbup > candidate.percentagethumbdown || candidate.percentagethumbup === candidate.percentagethumbdown"
+                        class="far fa-thumbs-up fa-2x average-positive"></i>
+
+
+                    <div layout="column">
+                        <p class="name-candidate">{{candidate.name}}</p>
+                        <div layout="row">
+                            <p class="p-month">1 month ago</p>
+                            <p class="p-topic"> in {{candidate.topic}}</p>
+                        </div>
+
+                        <p>Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.</p>
+                        <p ng-if="candidate.votepress === true">Thank you for voting!</p>
+
+                        <div layout="column" layout-xs="row">
+                            <div layout="row">
+                                <div layout="row" style="margin-top: 32px;">
+                                    <button class="button-thumbup" ng-click="main.getThumbUpOrDown(true,candidate.id)">
+                                        <i class="far fa-thumbs-up fa-2x vote-thumbup"></i>
+                                    </button>
+                                    <button class="button-thumbdown" ng-click="main.getThumbUpOrDown(false,candidate.id)">
+                                        <i class="far fa-thumbs-down fa-2x vote-thumbdown"></i>
+                                    </button>
+                                </div>
+                                <button ng-if="candidate.votepress === false" class="button-vote-now" ng-click="main.findCandidatebyId(candidate.id, $index)">Vote now</button>
+
+                            </div>
+                            <button ng-if="candidate.votepress === true" ng-click="main.voteAgain(candidate.id)" class="button-vote-now">Vote again</button>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="color-candidates" id="{{$index}}" flex-gt-md="45" flex="100" flex-gt-xs="100" flex-xs="100" flex-md="100" layout-align="space-between center">
+                </div>
+
+                <div class="color-inside-finger" layout="row">
+                    <i style="color: white;" class="far fa-thumbs-up fa-3x"></i>
+                    <p class="percentage">{{candidate.percentagethumbup}}%</p>
+                </div>
+                <div class="color-inside-down-finger" layout="row">
+
+                    <p class="percentage">{{candidate.percentagethumbdown}}%</p>
+                    <i style="color: white;" class="far fa-thumbs-down fa-3x"></i>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>
