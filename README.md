@@ -26,4 +26,4 @@ Running `grunt test` will run the unit tests with karma.
 
 # Layout
 
-![picture](/Screen Shot 2018-05-14 at 1.39.47 AM.png)
+![picture](Screen Shot 2018-05-14 at 1.39.47 AM.png)
