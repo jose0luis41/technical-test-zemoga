@@ -10,7 +10,7 @@ Requires Bower, Grunt, Compass and Yeoman.
 
 For Bower, Grunt and Yeoman, run `npm install --global yo bower grunt-cli`
 
-For Compass: `gem install compass.`
+For Compass: `gem install compass`.
 
 Afterwards, just run `npm install` and `bower install` for dependency installation (dependencies not included into the remote repo for obvious reasons).
 
