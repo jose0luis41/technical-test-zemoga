@@ -476,3 +476,113 @@ p{
         width: 150%;
     }
 }
+
+.last-footer{
+    display: table; 
+    margin-left: -16px;
+    margin-top: -96px;
+    margin-bottom: 20px;
+
+
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(13px);
+    filter: blur(0px);
+}
+
+.p-footer{
+    font-family: 'Lato', sans-serif;
+    color: black;
+    font-weight: 100;
+    font-size: 28px;
+    font-weight: lighter;
+    margin-top: 18px;
+    vertical-align: middle;
+    display: table-cell;   
+
+
+    @media (max-width: 1270px) {
+        margin-top: -18px;
+    }
+
+    @media (max-width: 959px) {
+        margin-top: -92px;
+    }
+}
+
+.istheremessage{
+
+    
+    //background-image: url("../images/peoplewalking.jpg");
+    height: auto;
+    margin-top: 8px;
+    margin-left: 150px;
+    margin-right: 150px;
+
+    @media (max-width: 976px) {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    //filter: blur(1px) opacity(0.2);
+}
+
+.container-inside-footer{
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.people-walking
+{
+  
+    background-image: url("../images/peoplewalking.jpg");
+    height: 80px;
+    filter: blur(1px) opacity(0.2);
+
+    @media (max-width: 1270px) {
+        height: 110px;
+
+    }
+
+    @media (max-width: 976px) {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    @media (max-width: 959px) {
+        height: 200px;
+    }
+
+}
+
+.submit-name{
+    color: black;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border-color: black;
+    border-style: solid;
+    font-family: 'Lato', sans-serif;
+    width: 212px;
+    height: 50px;
+    margin-top: 12px;
+    font-weight: 400;
+    border-width: medium;
+    margin-left: 78px;
+    font-size: 20px;
+
+    @media (max-width: 1270px) {
+        margin-top: -3px;
+    }
+
+    @media (max-width: 959px) {
+        margin-left: 0px;
+    }
+}
+
+hr.style-three {
+    border: 1;
+    border-bottom: 1px dashed black;
+    background: white;
+}
